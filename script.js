@@ -46,7 +46,7 @@ window.onkeydown = e => {
   // Set The Time
   if (!startTime) startTime = new Date().getTime();
   mainTime = (new Date().getTime() - startTime) / 1000 / 60;
-  if (idx < textEl.textContent.length) {
+  if (idx < textEl.textContent.length || textEl.querySelectorAll('span.false').length) {
     // Calling Functions
     typingFunc(e);
     countMistakes();
